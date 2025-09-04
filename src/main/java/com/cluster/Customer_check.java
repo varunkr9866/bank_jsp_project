@@ -7,10 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.mysql.cj.protocol.Resultset;
-
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
-import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -38,7 +36,14 @@ public class Customer_check extends HttpServlet{
 		try {
 			st =con.createStatement();
 			rs =st.executeQuery("SELECT ACCNUM,PSW FROM VARUN_BANK;");
-			
+			while(rs.next()) {
+				String acc= Integer.toString(rs.getInt("ACCNUM"));
+				String psw = rs.getString("PSW");
+				if (userName.equalsIgnoreCase(acc) && password.equalsIgnoreCase(psw)) {
+					RequestDispatcher rdp= req.getRequestDispatcher("./html/service.html");
+					rdp.forward(req, res);
+				}
+			}
 		} catch (SQLException e) {
 			System.out.println("Caught Exception:"+ e);
 			e.printStackTrace();
@@ -47,7 +52,7 @@ public class Customer_check extends HttpServlet{
 			try {
 				st.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				System.out.println("Caught Exception:"+ e);
 				e.printStackTrace();
 			}
 		}

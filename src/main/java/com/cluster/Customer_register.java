@@ -16,9 +16,7 @@ import jakarta.servlet.http.HttpServlet;
 
 public class Customer_register extends HttpServlet{
 		Connection con = null;
-		ServletContext ctx = null;
 		public void init(ServletConfig config) throws ServletException {
-			ctx = config.getServletContext();
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				System.out.println("got the driver loaded");
@@ -32,23 +30,22 @@ public class Customer_register extends HttpServlet{
 		}
 		public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
 			
-			int tempNum = Integer.parseInt(ctx.getInitParameter("accnum"));
-			int accNum = tempNum + 1;
 			String strfullname =req.getParameter("fullname");
 			String stremail =req.getParameter("email");
 			String strphone =req.getParameter("phone");
 			String strpassword =req.getParameter("password");
-			
+			int bal =5000;
 			
 			PreparedStatement pst = null;
 			
 			try {
-				pst = con.prepareStatement("INSERT INTO VARUN_BANK VALUES(?,?,?,?,?);");
-				pst.setInt(1, accNum);
+				pst = con.prepareStatement("INSERT INTO VARUN_BANK VALUES(?,?,?,?,?,?);");
+				pst.setLong(1, accNum);
 				pst.setString(2, strfullname);
 				pst.setString(3, stremail);
 				pst.setString(4, strphone);
 				pst.setString(5, strpassword);
+				pst.setInt(6,bal);
 				int i = pst.executeUpdate();
 				if (i == 1) {
 					RequestDispatcher rdp = req.getRequestDispatcher("./jsp/register.jsp");

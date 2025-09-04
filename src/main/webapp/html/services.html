@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Simple Bank</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f8fb;
+      color: #333;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #0059b3;
+    }
+
+    .container {
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #004080;
+      margin-bottom: 10px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #004080;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Simple Bank</h1>
+    <p>Your Trusted Partner in Banking</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="login.html">Login</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2>Our Banking Services</h2>
+    <p>We offer a wide range of financial services to meet your personal and business needs.</p>
+    
+    <div class="services">
+      <div class="deposit">
+        <img src="https://source.unsplash.com/400x250/?savings,bank" alt="Savings Account">
+        <h3>DEPOSIT</h3>
+        <p>Click Here To Deposit Money</p>
+      </div>
+      
+      <div class="transfer">
+        <img src="https://source.unsplash.com/400x250/?credit,card" alt="Credit Cards">
+        <h3>TRANSFER</h3>
+        <p>Click Here To Transfer Money</p>
+      </div>
+      
+      <div class="balance">
+        <img src="https://source.unsplash.com/400x250/?loan,money" alt="Loans">
+        <h3>CHECK BALANCE</h3>
+        <p>Click Here To Check Balance</p>
+      </div>
+      
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Varun Bank. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

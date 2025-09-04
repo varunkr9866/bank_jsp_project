@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #00509e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 60%;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #003366;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form textarea {
+            resize: none;
+            height: 100px;
+        }
+        form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #00509e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        form button:hover {
+            background: #003366;
+        }
+        .contact-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0f8ff;
+            border-left: 4px solid #00509e;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ABC Bank</h1>
+        <p>Secure. Reliable. Trusted.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have a question or need help? Please fill out the form below:</p>
+
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <h3>Our Contact Information</h3>
+            <p><strong>Address:</strong> 123 Main Street, New Delhi, India</p>
+            <p><strong>Email:</strong> support@abcbank.com</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Working Hours:</strong> Mon - Sat, 9:00 AM - 6:00 PM</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ABC Bank. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

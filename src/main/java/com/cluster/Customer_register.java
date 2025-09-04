@@ -48,7 +48,7 @@ public class Customer_register extends HttpServlet{
 				pst.setString(2, strfullname);
 				pst.setString(3, stremail);
 				pst.setString(4, strphone);
-				pst.setString(4, strpassword);
+				pst.setString(5, strpassword);
 				int i = pst.executeUpdate();
 				if (i == 1) {
 					RequestDispatcher rdp = req.getRequestDispatcher("./jsp/register.jsp");

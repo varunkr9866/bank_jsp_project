@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyBank - Welcome</title>
+  <title>Varun Bank - Welcome</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,9 +49,11 @@
       justify-content: space-around;
       padding: 60px 20px;
       background: #eaf3ff;
+      flex-wrap: wrap;
     }
     .hero-text {
       max-width: 500px;
+      margin-bottom: 20px;
     }
     .hero-text h2 {
       font-size: 2.2rem;
@@ -76,49 +78,27 @@
       background: #00264d;
     }
     .hero img {
-      max-width: 400px;
+      max-width: 420px;
       border-radius: 15px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
 
-    /* Services */
-    .services {
+    /* Info Section */
+    .info {
       padding: 50px 20px;
       text-align: center;
+      background: #fff;
     }
-    .services h2 {
+    .info h2 {
       font-size: 2rem;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
-    .service-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      max-width: 1000px;
+    .info p {
+      max-width: 700px;
       margin: auto;
-    }
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card h3 {
-      margin: 15px 0;
-    }
-    .card p {
-      padding: 0 15px 20px;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       color: #555;
+      line-height: 1.6;
     }
 
     /* Footer */
@@ -134,7 +114,7 @@
 <body>
 
   <header>
-    <h1>Welcome to MyBank</h1>
+    <h1>Welcome to Varun Bank</h1>
     <p>Your trusted partner in financial growth</p>
   </header>
 
@@ -153,34 +133,21 @@
       <p>Manage your money anytime, anywhere with our easy-to-use online banking system.</p>
       <a href="signup.html" class="btn">Get Started</a>
     </div>
-    <img src="https://picsum.photos/400/300?bank" alt="Banking illustration">
+    <img src="https://img.freepik.com/free-vector/bank-finance-infographic-template_23-2149732179.jpg?semt=ais_incoming&w=740&q=80" alt="Banking illustration">
   </section>
 
-  <!-- Services Section -->
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="card">
-        <img src="https://picsum.photos/400/200?money" alt="Savings Account">
-        <h3>Savings Account</h3>
-        <p>Enjoy high interest rates and secure deposits with our reliable savings plans.</p>
-      </div>
-      <div class="card">
-        <img src="https://picsum.photos/400/200?credit" alt="Credit Card">
-        <h3>Credit Cards</h3>
-        <p>Shop smart and earn rewards with our range of credit cards tailored for you.</p>
-      </div>
-      <div class="card">
-        <img src="https://picsum.photos/400/200?loan" alt="Loans">
-        <h3>Personal & Home Loans</h3>
-        <p>Quick approvals and low-interest rates for all your financial needs.</p>
-      </div>
-    </div>
+  <!-- Info Section -->
+  <section class="info">
+    <h2>Why Choose Varun Bank?</h2>
+    <p>
+      At Varun Bank, we provide fast, secure, and reliable banking services to make your life easier. 
+      Whether it’s savings, online transactions, our priority is your convenience and safety.
+    </p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 MyBank. All Rights Reserved.</p>
+    <p>&copy; 2025 Varun Bank. All Rights Reserved.</p>
   </footer>
 
 </body>

@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
@@ -39,9 +40,20 @@ public class Customer_register extends HttpServlet{
 			try {
 				pst = con.prepareStatement("INSERT INTO VARUN_BANK VALUES(?,?,?,?,?);");
 				pst.setInt(1, accNum);
-				
+				pst.setString(2, strfullname);
+				pst.setString(3, stremail);
+				pst.setString(4, strphone);
+				pst.setString(4, strpassword);
+				int i = pst.executeUpdate();
+				if (i == 1) {
+					RequestDispatcher rdp = req.getRequestDispatcher("./jsp/register.jsp");
+					rdp.forward(req, res);
+				} else {
+					RequestDispatcher rdp = req.getRequestDispatcher("./jsp/retry.jsp");
+					rdp.forward(req, res);
+				}
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				System.out.println("Caught Exception:"+ e);
 				e.printStackTrace();
 			}
 			

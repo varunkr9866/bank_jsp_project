@@ -3,6 +3,7 @@ package varun_bank;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import jakarta.servlet.ServletConfig;
@@ -26,13 +27,32 @@ public class Customer_register extends HttpServlet{
 			
 		}
 		public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+			int accNum = 110250;
 			String strfullname =req.getParameter("fullname");
 			String stremail =req.getParameter("email");
 			String strphone =req.getParameter("phone");
 			String strpassword =req.getParameter("password");
-			String strconfirm =req.getParameter("confirm");
+			accNum = accNum + 1;
 			
+			PreparedStatement pst = null;
 			
+			try {
+				pst = con.prepareStatement("INSERT INTO VARUN_BANK VALUES(?,?,?,?,?);");
+				pst.setInt(1, accNum);
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
+		}
+		
+		public void destroy() {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				System.out.println("Caught Exception:"+ e);
+				e.printStackTrace();
+			}
 		}
 }

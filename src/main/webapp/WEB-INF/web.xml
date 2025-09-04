@@ -18,5 +18,15 @@
 		<servlet-name>register</servlet-name>
 		<url-pattern>/register</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>checkup</servlet-name>
+		<servlet-class>com.cluster.Customer_check</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>checkup</servlet-name>
+		<url-pattern>/check</url-pattern>
+	</servlet-mapping>
 
 </web-app>

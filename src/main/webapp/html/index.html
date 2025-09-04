@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+
+        header {
+            background-color: #1c1c1c;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #f2c94c;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #f2c94c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            background: #f2c94c;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .buttons a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        img {
+            max-width: 250px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to VarunBank</h1>
+        <nav>
+            <a href="../login">Login</a>
+            <a href="register.java">Register</a>
+            <a href="about.jsp">About Us</a>
+            <a href="contact.jsp">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Bank Logo">
+        <h2>Secure & Trusted Online Banking</h2>
+        <p>
+            Manage your accounts, transfer money, pay bills, and access banking services securely anytime, anywhere.
+        </p>
+        <div class="buttons">
+            <a href="login.jsp">Login</a>
+            <a href="register.jsp">Open an Account</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 VarunBank. All rights reserved.</p>
+    </footer>
+</body>
+</html>

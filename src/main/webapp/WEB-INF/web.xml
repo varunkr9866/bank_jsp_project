@@ -3,7 +3,12 @@
 	xmlns="https://jakarta.ee/xml/ns/jakartaee"
 	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
 	id="WebApp_ID" version="6.0">
-	
+
+	<context-param>
+		<param-name>accnum</param-name>
+		<param-value>110050</param-value>
+	</context-param>
+
 	<servlet>
 		<servlet-name>register</servlet-name>
 		<servlet-class>com.cluster.Customer_register</servlet-class>

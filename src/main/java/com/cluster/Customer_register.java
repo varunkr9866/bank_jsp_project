@@ -1,4 +1,4 @@
-package varun_bank;
+package com.cluster;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -8,6 +8,7 @@ import java.sql.SQLException;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
@@ -15,7 +16,9 @@ import jakarta.servlet.http.HttpServlet;
 
 public class Customer_register extends HttpServlet{
 		Connection con = null;
+		ServletContext ctx = null;
 		public void init(ServletConfig config) throws ServletException {
+			ctx = config.getServletContext();
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				System.out.println("got the driver loaded");
@@ -28,12 +31,14 @@ public class Customer_register extends HttpServlet{
 			
 		}
 		public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-			int accNum = 110250;
+			
+			int tempNum = Integer.parseInt(ctx.getInitParameter("accnum"));
+			int accNum = tempNum + 1;
 			String strfullname =req.getParameter("fullname");
 			String stremail =req.getParameter("email");
 			String strphone =req.getParameter("phone");
 			String strpassword =req.getParameter("password");
-			accNum = accNum + 1;
+			
 			
 			PreparedStatement pst = null;
 			
@@ -55,6 +60,14 @@ public class Customer_register extends HttpServlet{
 			} catch (SQLException e) {
 				System.out.println("Caught Exception:"+ e);
 				e.printStackTrace();
+			}
+			finally {
+				try {
+					pst.close();
+				} catch (SQLException e) {
+					System.out.println("Caught Exception:"+ e);
+					e.printStackTrace();
+				}
 			}
 			
 		}
